@@ -34,6 +34,7 @@ public class MyClassLoader extends ClassLoader{
     public static void main(String[] args) throws Exception {
         MyClassLoader myClassLoader = new MyClassLoader("D:/Code/tuling/test");
         Class<?> clazz = myClassLoader.loadClass("org.hzz.Info");
+        Class<?> Strclazz = myClassLoader.loadClass("java.lang.String");
 
         Object o = clazz.newInstance();
         Method method = clazz.getMethod("callMe", null);
